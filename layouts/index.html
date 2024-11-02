@@ -1,9 +1,13 @@
 {{ define "main" }}
 	<main>
+        {{/* Commenting out the paginator for now
 		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
 		{{ range $paginator.Pages }}
 			{{ .Render "summary" }}
 		{{ end }}
 		{{ partial "pagination.html" . }}
+        */}}
+
+        {{ .Content }} <!-- This line will render the content of _index.md -->
 	</main>
 {{ end }}
